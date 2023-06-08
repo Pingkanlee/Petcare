@@ -14,14 +14,14 @@
   <style>
     body {
       font-family: 'Century Schoolbook', sans-serif;
-      background-color: #b2ebf2;
-      margin: 0;
-      padding: 20px;
       }
 
        .main-content {
          position: relative;
-         height: 100vh;
+         height: 175vh;
+         background-color: #b2ebf2;
+         background-size: cover;
+         width: 100%;
        }
 
        .container {
@@ -36,19 +36,88 @@
          text-align: left;
          position: relative;
          top: 70px;
-         left: -10px;
+         left: -40px;
          color: #0a224e;
        }
 
         .container p {
-         font-size: 20px;
+         font-size: 18px;
          margin: 20px;
-         text-align: left;
+         margin-right: 420px;
+         text-align: justify;
          position: relative;
          top: 100px;
-         left: -10px;
+         left: -40px;
          color: #0a224e;
        }
+
+      .image {
+        flex: 1;
+        text-align: right;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        bottom: 460px;
+        right: 30px;
+      }
+      
+      img {
+         width: 100%;
+         max-width: 400px;
+         margin-bottom: 0;
+      }
+
+       .image-gallery {
+         position: relative;
+         height: 130vh;
+         background-color: #004d80;
+         background-size: cover;
+         width: 100%;
+       }
+
+       .image-gallery img {
+         width: 100%;
+         max-width: 250px;
+         margin-bottom: 10px;
+         border-radius: 20px;
+         margin-top: 250px;
+       }
+
+       .image-gallery h4 {
+          font-family: "Century Schoolbook", sans-serif;
+          font-size: 22px;
+          color: white;
+          margin: 10px;
+          margin-bottom: 0;
+        }
+
+        .image-gallery h3 {
+          font-family: "Century Schoolbook", sans-serif;
+          font-size: 18px;
+          color: white;
+          margin: 10px;
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
+
+       .container h2 {
+         font-size: 60px;
+         margin : -20px;
+         text-align: center;
+         position: relative;
+         top: 100px;
+         color: white;
+       }
+
+       footer {
+        margin-top: none;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        background-color: #fff;
+      }
 
 
   </style>
@@ -80,23 +149,64 @@
         </ul>
       </div>
     </nav>
+  </header>
 
   <main>
     <!-- Konten utama website -->
     <section class="main-content">
       <div class="container">
-        <h1>At Plee Petcare, we put our love <br>for pets and their owners <br>into all that we do.</h1>
+        <h1>At Plee Petcare, we put our <br>love for pets and their <br>owners into all that we do.</h1>
         <p>We understand the special bond between humans and animals, and we believe that pets deserve the best care and attention. Our mission is to provide high-quality pet products and services that cater to the needs of both pets and their owners.</p>
         <p>With a team of passionate pet enthusiasts, we strive to create a positive and enriching experience for pets and their owners. Whether you're a dog lover, a cat person, or have other beloved pets, we have a wide range of products and services to meet your specific requirements.</p>
         <p>Our commitment to excellence extends beyond our products. We believe in building lasting relationships with our customers and providing exceptional customer service. Our knowledgeable and friendly staff are always ready to assist you in finding the perfect products for your pets.</p>
         <p>From premium pet food and treats to comfortable bedding, stimulating toys, and essential pet supplies, we have everything you need to keep your pets healthy, happy, and well-cared for. We source our products from trusted suppliers to ensure their quality and safety.</p>
-        <p>Thank you for choosing Ponto Pet as your trusted partner in pet care. We look forward to serving you and your furry friends with dedication and passion.</p>
+        <p>Thank you for choosing Plee Care as your trusted partner in pet care. We look forward to serving you and your furry friends with dedication and passion.</p>
+      </div>
+      <div class="image">
+      <img src="img/pet.jpg" alt="">
+    </div>
+    </section>
+
+    <section class="image-gallery">
+      <div class="container">
+        <h2>Our Team At Plee</h2>
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="img/pic1.png" alt="" class="img-fluid">
+            </div>
+            <h4>Nadia Buiney</h4>
+            <h3>A Trustworthy  person <br>that humble and can motivate others.</h3>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="img/pic2.png" alt="" class="img-fluid">
+            </div>
+            <h4>Pingkan Friska Lee</h4>
+            <h3>An extraordinary individual <br>with full of enthusiasm and spirit.</h3>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="d-flex align-items-center justify-content-center">
+              <img src="img/pic3.png" alt="" class="img-fluid">
+            </div>
+            <h4>Nur Evi Faridah</h4>
+            <h3>A deeply empathetic individual, <br>with humble personality and patient.</h3>
+          </div>
+        </div>
       </div>
     </section>
 
-
   </main>
 
+    <footer>
+      <p>&copy; 2023 Plee Care. All rights reserved.</p>
+    </footer>  
 
-  </header>
+          </footer>
+          <!-- Script JavaScript untuk Bootstrap -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+</body>
+</html>
