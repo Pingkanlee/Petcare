@@ -13,17 +13,17 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
     body {
-        font-family: Century Schoolbook, sans-serif;
-        background-color: #b2ebf2;
-      }
+      font-family: Century Schoolbook, sans-serif;
+      background-color: #b2ebf2;
+    }
 
-      .main-content {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 20px;
-      }
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-      .container {
+    .container {
       background-color: white;
       font-size: 18px;
       display: flex;
@@ -34,7 +34,7 @@
       padding: 25px;
       width: 900px;
       margin-bottom: 15px;
-      }
+    }
 
     .row {
       display: flex;
@@ -45,53 +45,80 @@
     }
 
     .row div {
-    flex-basis: 33.33%;
+      flex-basis: 33.33%;
+    }
 
-     }
-     .row ul li{
-          list-style-type: none;
+    .row ul li {
+      list-style-type: none;
+    }
 
-     }
+    .btn-primary {
+      display: inline-block;
+    }
 
-       .btn-primary {
-         display: inline-block;
-       }
+    .btn {
+      padding: 8px 35px;
+      background-color: #004d80;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+    }
 
-       .btn {
-         padding: 8px 35px;
-         background-color: #004d80;
-         color: #fff;
-         text-decoration: none;
-         border-radius: 50px;
-       }
+    .btn:hover {
+      background-color: #007bff;
+      border: none;
+    }
 
-       .btn:hover {
-         background-color: #007bff;
-         border: none;
-       }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 100px;
+    }
 
-      h1 {
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-        margin-bottom: 5px;
-        margin-top:100px;
+    .main-content p {
+      text-align: center;
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+
+    footer {
+      margin-top: 100px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      background-color: #fff;
+    }
+
+    /* Media Query untuk perangkat dengan lebar maksimum 768px */
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 15px;
       }
-
-      .main-content p {
-        text-align: center;
-        font-size: 45px;
-        font-weight: bold;
-        margin-bottom: 35px;
+      
+      .row {
+        flex-direction: column;
+        align-items: flex-start;
       }
-
-      footer {
-        margin-top: 30px;
-        text-align: center;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        background-color: #fff;
+      
+      .row div {
+        flex-basis: 100%;
+        margin-bottom: 15px;
       }
+      
+      .row ul li {
+        margin-bottom: 10px;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+    }
+
 
 </style>
 
@@ -144,7 +171,7 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>
@@ -162,7 +189,7 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>
@@ -180,7 +207,7 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>
@@ -198,7 +225,7 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div> 
@@ -216,7 +243,7 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>
@@ -234,10 +261,11 @@
         </ul>
       </div>
       <div>
-        <a href="#" class="btn btn-primary">Book Now</a>
+        <a href="" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>
+</main>
 
     <footer>
       <p>&copy; 2023 Plee Care. All rights reserved.</p>
@@ -251,4 +279,3 @@
 
 </body>
 </html>
-
