@@ -11,132 +11,180 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Link ke font yang diinginkan -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Century Schoolbook', sans-serif;
-      }
+<style>
+  body {
+    font-family: 'Century Schoolbook', sans-serif;
+  }
 
-       .main-content {
-         position: relative;
-         height: 100vh;
-       }
+  .main-content {
+    position: relative;
+    height: 100vh;
+  }
 
-       .background-image {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 150%;
-         background-image: url('bg.jpg');
-         background-size: cover;
-         background-position: center;
-         z-index: -1;
-       }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
 
-       .content-overlay {
-         position: relative;
-         z-index: 1;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         color: #fff;
-       }
+  .content-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
 
-       .container {
-         padding: 0;
-         margin-top: 20px;
-         margin-bottom: 20px;
-       }
+  .container {
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-       .container h1 {
-         font-size: 70px;
-         margin : 20px;
-         text-align: left;
-         position: relative;
-         top: 70px;
-         left: -10px;
-         color: #0a224e;
-       }
+  .container h1 {
+    font-size: 70px;
+    margin: 20px;
+    text-align: left;
+    position: relative;
+    line-height: 1;
+    top: 100px;
+    left: -10px;
+    color: #0a224e;
+  }
 
-        .container p {
-         font-size: 30px;
-         margin: 20px;
-         text-align: left;
-         position: relative;
-         top: 70px;
-         left: -10px;
-         color: #0a224e;
-       }
+  .container p {
+    font-size: 30px;
+    margin: 20px;
+    text-align: left;
+    position: relative;
+    top: 100px;
+    left: -10px;
+    color: #0a224e;
+  }
 
-       .btn-primary {
-         justify-content: center;
-         align-items: center;
-         margin-top: 30px;
-       }
+  .btn-primary {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
 
-       .btn {
-         padding: 10px 20px;
-         background-color: #007bff;
-         color: #fff;
-         text-decoration: none;
-         border-radius: 50px;
-       }
+  .btn {
+    padding: 10px 20px;
+    background-color: #004d80;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+  }
 
-       .btn:hover {
-         background-color: #004d80;
-         border: none;
-       }
+  .btn:hover {
+    background-color: #007bff;
+    border: none;
+  }
 
-       h1 {
-         font-size: 50px;
-         margin-top: 320px;
-         color: #0a224e;
-       }
+  h1 {
+    font-size: 50px;
+    margin-top: 320px;
+    color: #0a224e;
+  }
 
-       .image-gallery {
-         margin-top: 40px;
-         text-align: center;
-       }
+  .image-gallery {
+    margin-top: 40px;
+    text-align: center;
+  }
 
-       .image-gallery img {
-         width: 100%;
-         max-width: 230px;
-         margin-bottom: 20px;
-         border-radius: 20px;
-       }
+  .image-gallery img {
+    width: 100%;
+    max-width: 230px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
 
-       .icon-section {
-          margin-bottom: 0;
-          margin: auto;
-          width: 600px;
-          margin-top: 40px;
-          text-align: center;
-        }
+  .icon-section {
+    margin-bottom: 0;
+    margin: auto;
+    width: 600px;
+    margin-top: 40px;
+    text-align: center;
+  }
 
-        .icon-section i {
-          font-size: 30px;
-          color: #0a224e;
-          margin-right: 10px;
-        }
+  .icon-section i {
+    font-size: 30px;
+    color: #0a224e;
+    margin-right: 10px;
+  }
 
-        .icon-section h4 {
-          font-family: "Century Schoolbook", sans-serif;
-          font-size: 18px;
-          color: #0a224e;
-          margin-bottom: 0;
-        }
+  .icon-section h4 {
+    font-family: "Century Schoolbook", sans-serif;
+    font-size: 18px;
+    color: #0a224e;
+    margin-bottom: 0;
+  }
 
-        footer {
-          margin-top: 40px;
-          margin-bottom: 30px;
-          text-align: center;
-          border-top: 1px solid #ccc;
-          padding-top: 10px;
-        }
+  footer {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
 
-    </style>
+  /* Media Queries */
+
+  @media (max-width: 767px) {
+    .container h1 {
+      font-size: 40px;
+      margin: 20px;
+      text-align: center;
+      position: relative;
+      line-height: 1;
+      top: 0;
+      left: 0;
+      color: #0a224e;
+    }
+
+    .container p {
+      font-size: 24px;
+      margin: 20px;
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 0;
+      color: #0a224e;
+    }
+
+    .image-gallery img {
+      max-width: 150px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .icon-section {
+      width: 300px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .icon-section i {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+
+    .icon-section h4 {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -211,16 +259,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <img src="pet1.jpg" alt="Bathing" class="img-fluid">
+            <img src="img/pet1.jpg" alt="Bathing" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="pet2.jpg" alt="Tidying" class="img-fluid">
+            <img src="img/pet2.jpg" alt="Tidying" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="pet3.jpg" alt="Cleaning" class="img-fluid">
+            <img src="img/pet3.jpg" alt="Cleaning" class="img-fluid">
           </div>
           <div class="col-md-3">
-            <img src="pet4.jpg" alt="Bathing" class="img-fluid">
+            <img src="img/pet4.jpg" alt="Bathing" class="img-fluid">
           </div>
         </div>
       </div>
@@ -239,5 +287,6 @@
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        </body>
-        </html>
+
+</body>
+</html>
