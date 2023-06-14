@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plee - Petcare Online</title>
+  <!-- Link ke Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Link ke Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Link ke font yang diinginkan -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <style>
+    body {
+      font-family: 'Century Schoolbook', sans-serif;
+      padding: 50px;
+      margin-top: 40px;
+    }
+
+    .container h1 {
+      text-align: left;
+      color: #333;
+      font-size: 30px;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-top: 40px;
+      position: relative;
+      line-height: 1;
+    }
+
+    .container p {
+      text-align: left;
+      color: #333;
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 80px;
+      margin-top: 15px;
+      position: relative;
+      line-height: 1;
+    }
+
+    .form-container {
+      max-width: 950px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #004d80;
+      box-shadow: none;
+      margin-top: 30px;
+    }
+
+    .form-container label {
+      display: block;
+      color: #555;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      font-size: 14px;
+      border-bottom: 2px solid #004d80;
+      outline: none;
+    }
+
+    .form-container .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .form-container .form-row label {
+      flex-basis: 30%;
+    }
+
+    .form-container .form-row .input-container {
+      flex-basis: 70%;
+    }
+
+    .form-group button {
+      padding: 10px 40px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      background-color: #004d80;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+    
+    .form-group button:hover {
+      background-color: #007bff;
+    }   
+
+    /* Datepicker Styles */
+    .ui-datepicker {
+      font-size: 14px;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1.5px solid #004d80;
+    }
+
+    .ui-datepicker-title {
+      text-align: center; /* Add text-align property */
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      margin: 0 50px;
+    }
+
+    .ui-datepicker-prev:hover,
+    .ui-datepicker-next:hover {
+      color: #4CAF50;
+    }
+
+    .ui-datepicker-calendar {
+      border: none;
+    }
+
+    .ui-datepicker table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .ui-datepicker-table td {
+      padding: 0;
+      text-align: center;
+    }
+
+    .ui-datepicker-calendar .ui-state-default {
+      display: block;
+      padding: 10px;
+      color: #333;
+      background-color: #fff;
+      border: 1px solid #004d80;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .ui-datepicker-calendar .ui-state-default:hover {
+      background-color: #f5f5f5;
+    }
+
+    .ui-datepicker-calendar .ui-state-highlight {
+      background-color: #004d80;
+      color: #fff;
+    }
+
+    .ui-datepicker-calendar .ui-state-active {
+      background-color: #004d80;
+      color: #fff;
+    }
+
+/* CSS untuk bagian "Service Details" */
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+#service-name,
+#service-date,
+#service-time,
+#service-price,
+#service-total {
+  font-weight: bold;
+}
+
+  .btn-primary {
+    justify-content: left;
+    align-items: left;
+    color: black;
+  }
+
+  .btn {
+    padding: none;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    color: black;
+    border: none;
+    outline: none;
+  }
+
+  footer {
+        margin-top: 60px;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        padding-bottom: 6px;
+        margin-left: -50px;
+        margin-right: -50px;
+        margin-bottom: -50px;
+        background-color: #fff;
+      }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="index.html">Plee Petcare</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<main>
+  <section class="form-container">
+    <div class="container">
+      <a href="service.html" class="btn btn-primary">Back</a>
+      <h1>Your details</h1>
+      <p>Check out our availability and <br>book the date and time that works for you</p>
+      <div class="row">
+        <div class="col-md-6">
+          <form action="mailto:pingkanfriskalee@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="treatment-type">Treatment Type:</label>
+              <select id="treatment-type" name="Treatment" placeholder="Select Treatment Type">
+                <option value="full-care">Full Care</option>
+                <option value="special-treatment">Special Treatment</option>
+                <option value="haircut">Haircut</option>
+                <option value="bath">Bath</option>
+                <option value="teeth-cleaning">Teeth Cleaning</option>
+                <option value="nail-trim&filling">Nail Trim & Filling</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="Name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="Email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="Phone" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="Address" placeholder="Address">
+            </div>
+            <div class="form-group">
+              <label for="datepicker">Select a Date:</label>
+              <input type="text" id="datepicker" name="Date" placeholder="Select Date">
+            </div>
+            <div class="form-group">
+              <label for="timepicker">Select a Time:</label>
+              <select id="timepicker" name="Time" placeholder="Select Time">
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Services Details</h2>
+          <ul>
+            <li>Treatment Type: <span id="service-name">Treatment Type</span></li>
+            <li>Date: <span id="service-date">Appointment Date</span></li>
+            <li>Time: <span id="service-time">Appointment Time</span></li>
+            <li>Total: <span id="service-total">Total Price</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Link ke jQuery dan jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+
+// Update service details
+$("#treatment-type, #datepicker, #timepicker").on("change", function () {
+  var treatmentType = $("#treatment-type").val();
+  var serviceDate = $("#datepicker").val();
+  var serviceTime = $("#timepicker").val();
+
+  var totalPrice = calculateTotalPrice(treatmentType); // Calculate total price based on treatment type
+  $("#service-total").text("Rp" + totalPrice.toLocaleString());
+
+  // Update service details
+  $("#service-name").text($("#treatment-type option:selected").text());
+  $("#service-date").text(serviceDate);
+  $("#service-time").text(serviceTime);
+});
+
+// Function to calculate total price based on treatment type
+function calculateTotalPrice(treatmentType) {
+  var price = 0;
+
+  // Perform calculation based on treatment type
+  if (treatmentType === "full-care") {
+    price = 300000;
+  } else if (treatmentType === "special-treatment") {
+    price = 350000;
+  } else if (treatmentType === "haircut") {
+    price = 150000;
+  } else if (treatmentType === "bath") {
+    price = 80000;
+  } else if (treatmentType === "teeth-cleaning") {
+    price = 50000;
+  } else if (treatmentType === "nail-trim&filling") {
+    price = 50000;
+  }
+
+  return price;
+}
+
+  </script>
+</main>
+
+
+    <footer>
+      <p>&copy; 2023 Plee Care. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
