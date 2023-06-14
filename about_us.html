@@ -14,112 +14,148 @@
   <style>
     body {
       font-family: 'Century Schoolbook', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      position: relative;
+      background-color: #b2ebf2;
+      width: 100%;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .container {
+      padding: 0;
+      margin-top: 20px;
+      margin-bottom: none;
+    }
+
+    .container h1 {
+      font-size: 60px;
+      margin: none;
+      margin-left: -20px;
+      margin-right: -200px;
+      text-align: left;
+      color: #0a224e;
+    }
+
+    .container p {
+      font-size: 18px;
+      margin: 20px;
+      margin-left: -20px;
+      margin-right: -160px;
+      text-align: justify;
+      color: #0a224e;
+    }
+
+    .image {
+      text-align: right;
+      margin: 100px;
+      margin-right: 40px;
+      margin-top: -560px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .image-gallery {
+      background-color: #004d80;
+      width: 100%;
+      padding: 50px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      margin-top: 100px;
+    }
+
+    .image-gallery h4 {
+      font-family: "Century Schoolbook", sans-serif;
+      font-size: 22px;
+      color: white;
+      margin: 10px;
+      margin-bottom: 0;
+    }
+
+    .image-gallery h3 {
+      font-family: "Century Schoolbook", sans-serif;
+      font-size: 18px;
+      color: white;
+      margin: 10px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    .container h2 {
+      font-size: 60px;
+      margin: -20px;
+      text-align: center;
+      margin-top: -70px;
+      color: white;
+    }
+
+    footer {
+      margin-top: none;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      background-color: #fff;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .container h1 {
+        font-size: 36px;
+        margin-right: 20px;
+        top: -300px;
+        left: -20px;
       }
 
-       .main-content {
-         position: relative;
-         height: 175vh;
-         background-color: #b2ebf2;
-         background-size: cover;
-         width: 100%;
-       }
-
-       .container {
-         padding: 0;
-         margin-top: 20px;
-         margin-bottom: 20px;
-       }
-
-       .container h1 {
-         font-size: 60px;
-         margin : 20px;
-         text-align: left;
-         position: relative;
-         top: 70px;
-         left: -40px;
-         color: #0a224e;
-       }
-
-        .container p {
-         font-size: 18px;
-         margin: 20px;
-         margin-right: 420px;
-         text-align: justify;
-         position: relative;
-         top: 100px;
-         left: -40px;
-         color: #0a224e;
-       }
+      .container p {
+        font-size: 16px;
+        margin-right: 20px;
+        top: -250px;
+        left: -20px;
+      }
 
       .image {
-        flex: 1;
-        text-align: right;
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        bottom: 460px;
-        right: 30px;
-      }
-      
-      img {
-         width: 100%;
-         max-width: 400px;
-         margin-bottom: 0;
-      }
-
-       .image-gallery {
-         position: relative;
-         height: 130vh;
-         background-color: #004d80;
-         background-size: cover;
-         width: 100%;
-       }
-
-       .image-gallery img {
-         width: 100%;
-         max-width: 250px;
-         margin-bottom: 10px;
-         border-radius: 20px;
-         margin-top: 250px;
-       }
-
-       .image-gallery h4 {
-          font-family: "Century Schoolbook", sans-serif;
-          font-size: 22px;
-          color: white;
-          margin: 10px;
-          margin-bottom: 0;
-        }
-
-        .image-gallery h3 {
-          font-family: "Century Schoolbook", sans-serif;
-          font-size: 18px;
-          color: white;
-          margin: 10px;
-          margin-bottom: 0;
-          margin-top: 20px;
-        }
-
-       .container h2 {
-         font-size: 60px;
-         margin : -20px;
-         text-align: center;
-         position: relative;
-         top: 100px;
-         color: white;
-       }
-
-       footer {
-        margin-top: none;
         text-align: center;
-        border-top: 1px solid #ccc;
-        padding-top: 10px;
-        padding-bottom: 6px;
-        background-color: #fff;
+        margin-top: 100px;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        object-fit: cover;
       }
 
 
+      .image-gallery img {
+        max-width: 180px;
+        margin-top: 100px;
+      }
+
+      .container h2 {
+        font-size: 36px;
+        margin-top: -100px;
+        top: 50px;
+      }
+
+    .image-gallery h3 {
+      font-size: 16px;
+      margin-bottom: -20px;
+    }
+    }
   </style>
 
 </head>
@@ -127,7 +163,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">Plee Petcare</a>
+      <a class="navbar-brand" href="index.html">Plee Petcare</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -141,7 +177,7 @@
             <a class="nav-link" href="service.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about_us.html">About Us</a>
+            <a class="nav-link" href="about us.html">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -155,16 +191,35 @@
     <!-- Konten utama website -->
     <section class="main-content">
       <div class="container">
-        <h1>At Plee Petcare, we put our <br>love for pets and their <br>owners into all that we do.</h1>
-        <p>We understand the special bond between humans and animals, and we believe that pets deserve the best care and attention. Our mission is to provide high-quality pet products and services that cater to the needs of both pets and their owners.</p>
-        <p>With a team of passionate pet enthusiasts, we strive to create a positive and enriching experience for pets and their owners. Whether you're a dog lover, a cat person, or have other beloved pets, we have a wide range of products and services to meet your specific requirements.</p>
-        <p>Our commitment to excellence extends beyond our products. We believe in building lasting relationships with our customers and providing exceptional customer service. Our knowledgeable and friendly staff are always ready to assist you in finding the perfect products for your pets.</p>
-        <p>From premium pet food and treats to comfortable bedding, stimulating toys, and essential pet supplies, we have everything you need to keep your pets healthy, happy, and well-cared for. We source our products from trusted suppliers to ensure their quality and safety.</p>
-        <p>Thank you for choosing Plee Care as your trusted partner in pet care. We look forward to serving you and your furry friends with dedication and passion.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>At Plee Petcare, we put our <br>love for pets and their <br>owners into all that we do.</h1>
+            <div class="container">
+              <p>We understand the special bond between humans and animals, and we believe that pets deserve the best care
+                  and attention. Our mission is to provide high-quality pet products and services that cater to the needs of
+                  both pets and their owners.</p>
+              <p>With a team of passionate pet enthusiasts, we strive to create a positive and enriching experience for pets
+                  and their owners. Whether you're a dog lover, a cat person, or have other beloved pets, we have a wide range
+                  of products and services to meet your specific requirements.</p>
+              <p>Our commitment to excellence extends beyond our products. We believe in building lasting relationships with
+                  our customers and providing exceptional customer service. Our knowledgeable and friendly staff are always
+                  ready to assist you in finding the perfect products for your pets.</p>
+              <p>From premium pet food and treats to comfortable bedding, stimulating toys, and essential pet supplies, we
+                  have everything you need to keep your pets healthy, happy, and well-cared for. We source our products from
+                  trusted suppliers to ensure their quality and safety.</p>
+              <p>Thank you for choosing Plee Care as your trusted partner in pet care. We look forward to serving you and
+                  your furry friends with dedication and passion.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="image">
-      <img src="pet.jpg" alt="">
-    </div>
+        <img src="pet.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="image-gallery">
+      <!-- Bagian galeri gambar -->
     </section>
 
     <section class="image-gallery">
@@ -176,21 +231,21 @@
               <img src="pic1.png" alt="" class="img-fluid">
             </div>
             <h4>Nadia Buiney</h4>
-            <h3>A Trustworthy  person <br>that humble and can motivate others.</h3>
+            <h3>A Trustworthy person<br>that humble and can motivate others.</h3>
           </div>
           <div class="col-md-4 text-center">
             <div class="d-flex align-items-center justify-content-center">
               <img src="pic2.png" alt="" class="img-fluid">
             </div>
             <h4>Pingkan Friska Lee</h4>
-            <h3>An extraordinary individual <br>with full of enthusiasm and spirit.</h3>
+            <h3>An extraordinary individual<br>with full of enthusiasm and spirit.</h3>
           </div>
           <div class="col-md-4 text-center">
             <div class="d-flex align-items-center justify-content-center">
               <img src="pic3.png" alt="" class="img-fluid">
             </div>
             <h4>Nur Evi Faridah</h4>
-            <h3>A deeply empathetic individual, <br>with humble personality and patient.</h3>
+            <h3>A deeply empathetic individual,<br>with a humble personality and patience.</h3>
           </div>
         </div>
       </div>
@@ -198,15 +253,15 @@
 
   </main>
 
-    <footer>
-      <p>&copy; 2023 Plee Care. All rights reserved.</p>
-    </footer>  
+  <footer>
+    <p>&copy; 2023 Plee Care. All rights reserved.</p>
+  </footer>
 
-          </footer>
-          <!-- Script JavaScript untuk Bootstrap -->
-          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- Script JavaScript untuk Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
